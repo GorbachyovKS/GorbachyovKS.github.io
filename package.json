@@ -8,6 +8,10 @@
   },
   "dependencies": {
     "core-js": "^3.8.3",
+    "glsl-noise": "0.0.0",
+    "gsap": "^3.12.5",
+    "three": "^0.134.0",
+    "troisjs": "^0.3.4",
     "vue": "^3.2.13"
   },
   "devDependencies": {
