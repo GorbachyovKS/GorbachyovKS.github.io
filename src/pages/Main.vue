@@ -145,10 +145,7 @@ const projectsItem = ref()
 
 const scrollBottom = () => {
     const page = document.querySelector('.wrapper')
-    page.scrollTo({
-        bottom: 100,
-        left: 0,
-    })
+    page.scrollTop = 9999
 }
 
 onMounted(() => {
