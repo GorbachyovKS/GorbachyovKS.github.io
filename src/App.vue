@@ -30,6 +30,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  scroll-behavior: smooth;
 }
 
 #render {
@@ -66,5 +67,17 @@ body {
 .img-container img{
   width: 100%;
   height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    padding-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .wrapper {
+    padding-bottom: 100px;
+  }
 }
 </style>

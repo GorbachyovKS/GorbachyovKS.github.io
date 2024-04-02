@@ -9,10 +9,10 @@
                     <li v-for="(technology, index) in project.technologies" :key="index">{{ technology }}</li>
                 </ul>
             </div>
-            <div class="project-link">
+            <div class="project-link" v-if="project.link">
                 <span>Website: </span>
                 <button class="button" @mouseleave="handlerMouseleave" @mousemove="handlerMousemove">
-                    <a :href="project.link">{{ project.title }}</a>
+                    <a target="_blank" :href="project.link">{{ project.title }}</a>
                 </button>
             </div>
         </div>
@@ -92,10 +92,11 @@ onMounted(() => {
     flex-direction: column;
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.25);
+    padding-bottom: 15px;
 }
 
 .project__title {
-    padding: 10px 15px;
+    padding: 10px;
 }
 .project-main {
     display: flex;
@@ -117,8 +118,12 @@ onMounted(() => {
 .project-technologies ul {
     display: flex;
     gap: 7.5px;
-
     padding: 0 10px; 
+}
+
+.project-technologies ul {
+    flex-wrap: wrap;
+
 }
 
 .project-technologies ul li {
@@ -137,7 +142,7 @@ onMounted(() => {
 }
 
 .project-link {
-    padding: 0 10px 15px;
+    padding: 0 10px 0px ;
     display: flex;
     align-items: center;
     gap: 10px
@@ -159,6 +164,50 @@ button a {
     font-weight: bolder;
     color: white;
     line-height: 0;
+}
+
+@media screen and (max-width: 768px){
+    * {
+        font-size: 14px;
+    }
+    
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    a {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    * {
+        font-size: 12px;
+    }
+    
+    h1 {
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    h3 {
+        font-size: 14px;
+    }
+
+    a {
+        font-size: 10px;
+    }
 }
 
 
